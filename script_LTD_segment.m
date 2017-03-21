@@ -10,6 +10,12 @@ imdir = './img/input/';
 imname = '1_19_s.bmp';
 spdir = './img/output/sp/';
 outdir = './img/output/seg/';
+if ~isdir(spdir)
+    mkdir(spdir);
+end
+if ~isdir(outdir)
+    mkdir(outdir);
+end
 SHOW = 1;
 %% superpixel parameters
 sp_num_max = 800; % max superpixel number
